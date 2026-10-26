@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#2b2d38">
+  <meta name="description" content="Lengkapi data peserta IT Camp 2026 HMPS Informatika UIN Banten.">
+  <title>Data Peserta • IT Camp 2026</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <div class="color-strip" aria-hidden="true"></div>
+  <div id="page">
+    <div id="demo-banner" class="demo-banner" hidden>Pratinjau interaktif · data contoh, bukan data peserta</div>
+    <header class="topbar shell">
+      <a class="brand" href="./" aria-label="IT Camp 2026, halaman awal">
+        <svg class="brand-icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 30 20 7l15 23H5Z"/><path d="m13 30 7-11 7 11M3 35h34"/></svg>
+        <span>HMPS Informatika<span class="brand-sub">UIN Banten</span></span>
+      </a>
+      <a class="help-short" data-wa="general" aria-label="Bantuan melalui WhatsApp">Bantuan <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="shell">
+      <ol class="stepper" aria-label="Langkah pengisian">
+        <li data-step="1" aria-current="step"><span>1</span> Cari nama</li>
+        <li data-step="2"><span>2</span> Isi data</li>
+        <li data-step="3"><span>3</span> Selesai</li>
+      </ol>
+      <section id="search-screen" aria-labelledby="hero-title">
+        <div class="event-ticket">
+          <div class="ticket-top"><span>Rekap peserta</span><span class="edition">2026 / Informatika</span></div>
+          <div class="ticket-heading"><h1 id="hero-title">IT CAMP<br><span>2026</span></h1><svg class="camp-art" viewBox="0 0 100 110" aria-hidden="true"><path d="M12 87 51 24l39 63H12Z"/><path d="m33 87 18-31 18 31M6 98h88M51 9v7M29 16l5 7M73 16l-5 7"/><circle cx="82" cy="40" r="5"/><path d="M14 46h10m-5-5v10"/></svg></div>
+          <div class="ticket-bottom"><span>Sudah ikut ceritanya.<br><strong>Sekarang, lengkapi datanya.</strong></span><span class="ticket-stamp"><span id="total-count">67</span><small>peserta</small></span></div>
+        </div>
+        <div class="progress-block">
+          <div class="progress-caption"><span id="progress-label" role="status">Memuat progres pengisian…</span><button id="progress-retry" class="text-button" hidden>Coba lagi</button><span id="progress-percent" aria-hidden="true"></span></div>
+          <div id="progress" class="progress-track" role="progressbar" aria-label="Peserta yang sudah mengisi" aria-valuemin="0" aria-valuemax="67"><span id="progress-fill"></span></div>
+        </div>
+        <div class="search-section">
+          <label class="section-title" for="search">Cari namamu dulu</label>
+          <p class="muted search-hint" id="search-hint">Ketik minimal 3 huruf dari nama di daftar peserta.</p>
+          <div class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Ketik nama kamu…" autocomplete="off" autocapitalize="words" spellcheck="false" maxlength="100" aria-describedby="search-hint search-status" aria-controls="results"></div>
+          <p id="search-status" class="search-status muted" role="status" aria-live="polite">Pilih namamu untuk mengisi atau memeriksa data.</p>
+          <div id="results" class="results" aria-busy="false"></div>
+          <div id="search-error" class="notice" hidden><p id="search-error-text"></p><button id="search-retry" class="secondary">Coba lagi</button></div>
+          <div id="empty-state" class="notice" hidden><h2>Namamu belum ada?</h2><p>Hubungi <span data-contact></span> dengan bukti pembayaran dan bukti foto keikutsertaan IT Camp 2026.</p><a class="secondary" data-wa="missing">Konfirmasi lewat WhatsApp <span aria-hidden="true">↗</span></a></div>
+          <div id="setup-notice" class="notice" hidden><h2>Formulir belum dibuka</h2><p>Pengisian sedang disiapkan panitia. Silakan kembali nanti atau hubungi <span data-contact></span>.</p><a class="secondary" data-wa="general">Hubungi panitia <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <details class="help-details"><summary>Nama tidak ada atau datanya keliru?</summary><p>Nama tidak ada? Siapkan bukti pembayaran dan foto keikutsertaan. Jika sudah terisi, pilih namamu dan periksa NIM, kelas, serta kelompok sebelum menghubungi panitia.</p><a class="text-link" data-wa="missing">Hubungi <span data-contact></span> di WhatsApp ↗</a></details>
+      </section>
+      <section id="success-screen" class="success-screen" aria-labelledby="success-title" hidden>
+        <svg class="success-icon" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29"/><path d="m18 32 9 9 20-20"/></svg>
+        <h1 id="success-title" tabindex="-1">Datamu sudah masuk!</h1>
+        <p class="muted">Terima kasih sudah melengkapi ceritamu<br>di IT Camp 2026.</p>
+        <article class="participant-card" id="participant-card" aria-label="Kartu data peserta">
+          <div class="card-heading"><span>IT CAMP 2026</span><span class="card-status">✓ Tercatat</span></div>
+          <p class="card-label">Nama peserta</p><h2 id="success-name"></h2>
+          <dl class="card-fields"><div><dt>NIM</dt><dd id="success-nim"></dd></div><div><dt>Kelas</dt><dd id="success-kelas"></dd></div><div class="group-field"><dt>Kelompok</dt><dd id="success-kelompok"></dd></div></dl>
+          <div class="card-footer"><span>HMPS Informatika · UIN Banten</span><span aria-hidden="true">✦</span></div>
+        </article>
+        <p class="small muted">Boleh simpan tangkapan layar ini sebagai catatanmu.</p>
+        <button id="back-search" class="primary">Kembali ke pencarian</button>
+        <a class="text-link correction-link" data-wa="correction">Ada data yang keliru? Hubungi panitia ↗</a>
+      </section>
+      <footer class="footer"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="8" width="12" height="9" rx="2"/><path d="M6 8V6a4 4 0 0 1 8 0v2"/></svg><p>NIM, kelas, dan kelompok digunakan untuk rekap peserta yang diserahkan kepada dosen.</p></footer>
+    </main>
+  </div>
+  <div id="sheet-layer" class="sheet-layer" hidden>
+    <div id="sheet-backdrop" class="sheet-backdrop"></div>
+    <section id="sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" aria-describedby="sheet-description" tabindex="-1">
+      <div id="drag-handle" class="drag-area" aria-hidden="true"><span></span></div>
+      <div class="sheet-header"><div><p class="sheet-eyebrow">Data peserta</p><h2 id="sheet-title" tabindex="-1">Ini kamu?</h2></div><button id="close-sheet" class="icon-button" aria-label="Tutup formulir">×</button></div>
+      <div class="sheet-body">
+        <p id="selected-name" class="selected-name"></p>
+        <p id="sheet-description" class="muted">Pastikan namanya benar, lalu lengkapi data di bawah.</p>
+        <div id="detail-state" hidden><p id="detail-status" role="status"></p><div id="detail-content" hidden><dl class="review-fields"><div><dt>NIM</dt><dd id="detail-nim"></dd></div><div><dt>Kelas</dt><dd id="detail-kelas"></dd></div><div><dt>Kelompok</dt><dd id="detail-kelompok"></dd></div></dl><p class="notice compact">Periksa ketiga data di atas. Jika sudah benar, kamu tidak perlu mengisi lagi. Jika berbeda, konfirmasikan kepada <span data-contact></span>.</p><a id="detail-wa" class="primary" data-wa="correction">Data keliru? Konfirmasi ke WhatsApp ↗</a></div><button id="detail-retry" class="secondary" hidden>Coba lagi</button><button id="detail-done" class="secondary">Kembali ke pencarian</button></div>
+        <form id="entry-form" novalidate>
+          <div class="field"><div class="field-heading"><label for="nim">NIM</label><span id="nim-count" class="muted">0 digit</span></div><input id="nim" name="nim" type="text" inputmode="numeric" pattern="[0-9]{9,10}" maxlength="10" autocomplete="off" placeholder="Masukkan 9–10 angka" aria-describedby="nim-help nim-error"><p id="nim-help" class="field-help muted">9–10 angka, sesuai NIM kampusmu.</p><p id="nim-error" class="field-error" aria-live="polite"></p></div>
+          <fieldset class="field class-field"><legend>Kelas</legend><div id="class-options" class="segmented"><span id="class-indicator" aria-hidden="true" hidden></span><label><input type="radio" name="kelas" value="A" aria-describedby="kelas-error"><span>A</span></label><label><input type="radio" name="kelas" value="B" aria-describedby="kelas-error"><span>B</span></label><label><input type="radio" name="kelas" value="C" aria-describedby="kelas-error"><span>C</span></label></div><p id="kelas-error" class="field-error" aria-live="polite"></p></fieldset>
+          <div class="field"><label for="kelompok">Kelompok</label><select id="kelompok" name="kelompok" aria-describedby="kelompok-error"><option value="">Pilih kelompokmu</option></select><p id="kelompok-error" class="field-error" aria-live="polite"></p></div>
+          <p class="save-note">Cek sekali lagi, ya. Setelah disimpan, perubahan data dibantu panitia.</p>
+          <div id="form-alert" class="notice compact" role="alert" hidden><p id="form-alert-text"></p><button id="form-retry" class="secondary" type="button" hidden>Coba lagi</button><a id="form-wa" class="text-link" data-wa="correction" hidden>Konfirmasi ke panitia ↗</a><button id="inspect-existing" class="secondary" type="button" hidden>Periksa data yang tersimpan</button></div>
+          <div class="form-actions"><button id="submit" class="primary" type="submit"><span class="spinner" aria-hidden="true" hidden></span><span id="submit-label">Simpan data saya</span></button><button id="not-me" class="text-button" type="button">Bukan saya</button></div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <noscript><p class="notice">Aktifkan JavaScript agar bisa mencari nama dan mengisi data.</p></noscript>
+</body>
+</html>
